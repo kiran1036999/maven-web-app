@@ -1,8 +1,6 @@
 pipeline {
   
-    agent {
-        label 'Ansible-Node'
-    }
+    agent any
     
     tools{
         maven "Maven-3.9.6"
@@ -20,7 +18,7 @@ pipeline {
             }
         }
         
-        stage('Create Image'){
+        /* stage('Create Image'){
             steps{
                steps {
                 	script {
@@ -28,6 +26,6 @@ pipeline {
                 	}
                 }
             }
-        }
+        } */
     }
 }
